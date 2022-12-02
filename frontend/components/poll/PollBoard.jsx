@@ -1,22 +1,36 @@
-import React from 'react'
+import React from "react";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import No from "./No";
+import Yes from "./Yes";
 
-
-const PollBoard = () => {
+const PollBoard = ({ title, text, yes, no }) => {
   return (
     <Card style={{ width: "30rem" }} className="text-center">
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{text}</Card.Text>
+        <div>
+          <Yes yes={yes} />
+        </div>
+        <div className="mt-3">
+          <No no={no} />
+        </div>
+        <div className="d-flex flex-row-reverse mt-5">
+          <div>
+            <Button variant="success" size="sm" className="px-4">
+              YES
+            </Button>
+          </div>
+          <div className="me-5">
+            <Button variant="danger" size="sm" className="px-4">
+              NO
+            </Button>
+          </div>
+        </div>
       </Card.Body>
     </Card>
   );
-}
+};
 
-export default PollBoard
+export default PollBoard;
