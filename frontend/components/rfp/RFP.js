@@ -50,8 +50,8 @@ const index = ({ currLeft, mySigner }) => {
 	};
 
 	useEffect(() => {
-		fetchProposals();
-	}, [jaimaatadi]);
+    fetchProposals();
+  }, [jaimaatadi, currLeft]);
 
 	const fetchProposals = async () => {
 		setLoading(true);
@@ -78,40 +78,40 @@ const index = ({ currLeft, mySigner }) => {
 		);
 	}
 	return (
-		<div>
-			<div>
-				{proposals.map((prp, idx) => (
-					<div key={idx}>
-						<PollBoard
-							id={`${prp._id}`}
-							text={prp._msg}
-							yes={prp._yes}
-							no={prp._no}
-							currLeft={currLeft}
-							mySigner={mySigner}
-							isSnapShot={false}
-						/>
-					</div>
-				))}
-			</div>
+    <div>
+      <div>
+        {proposals.map((prp, idx) => (
+          <div key={idx}>
+            <PollBoard
+              id={`${prp._id}`}
+              text={prp._msg}
+              yes={prp._yes}
+              no={prp._no}
+              currLeft={currLeft}
+              mySigner={mySigner}
+              isSnapShot={false}
+            />
+          </div>
+        ))}
+      </div>
 
-			<div className="position-absolute bottom-0" style={{ width: '750px' }}>
-				<div className="d-flex">
-					<input
-						type="email"
-						value={newProp}
-						onChange={(e) => setNewProp(e.target.value)}
-						className="form-control mx-2 my-2"
-						placeholder="Type your message..."
-					/>
-					<button
-						onClick={sendProposal}
-						className="btn btn-success mx-2 my-2 px-3"
-					>{`>`}</button>
-				</div>
-			</div>
-		</div>
-	);
+      <div className="absolute inset-x-50 bottom-0" style={{ width: "750px" }}>
+        <div className="d-flex">
+          <input
+            type="email"
+            value={newProp}
+            onChange={(e) => setNewProp(e.target.value)}
+            className="form-control mx-2 my-2"
+            placeholder="Type your message..."
+          />
+          <button
+            onClick={sendProposal}
+            className="btn btn-success mx-2 my-2 px-3"
+          >{`>`}</button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default index;
