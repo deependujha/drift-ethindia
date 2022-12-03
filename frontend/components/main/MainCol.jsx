@@ -1,5 +1,6 @@
 import React from 'react';
 import Chats from '../chatroom/Chats';
+import SnapShot from '../snapshot/SnapShot';
 import RFP from '../rfp/RFP';
 
 const MainCol = ({ currLeft, currRight, mySigner }) => {
@@ -20,18 +21,17 @@ const MainCol = ({ currLeft, currRight, mySigner }) => {
 	} else if (currRight === 'rfp') {
 		return (
 			<div>
-				<div>welcome to request for proposal of {currLeft}</div>
-				<div>alpha</div>
 				<div className="d-flex justify-content-center">
-					<RFP currLeft={currLeft} mySigner={mySigner}/>
+					<RFP currLeft={currLeft} mySigner={mySigner} />
 				</div>
 			</div>
 		);
 	} else if (currRight === 'snapshot') {
 		return (
 			<div>
-				<div>welcome to snapshot of {currLeft}</div>
-				<div>alpha</div>
+				<div className="d-flex justify-content-center">
+					<SnapShot currLeft={currLeft} mySigner={mySigner} />
+				</div>
 			</div>
 		);
 	} else {

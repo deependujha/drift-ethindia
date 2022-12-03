@@ -10,7 +10,7 @@ const index = ({ currLeft, mySigner }) => {
 	let jaimaatadi = 0;
 	let contract;
 	const [loading, setLoading] = useState(false);
-	const [proposals, setProposals] = useState([]);
+	const [snapShots, setSnapShots] = useState([]);
 	const [newProp, setNewProp] = useState('');
 
 	let smartContractAddress;
@@ -28,42 +28,42 @@ const index = ({ currLeft, mySigner }) => {
 		ABI = ABI3;
 	}
 
-	const sendProposal = async () => {
-		console.log('you clicked on send proposal');
-		console.log('newProp: ', newProp);
+	const sendSnapShot = async () => {
+		// console.log('you clicked on send proposal');
+		// console.log('newProp: ', newProp);
 		contract = new ethers.Contract(smartContractAddress, ABI, mySigner);
 		contract
-			.createRequestForProposal(newProp)
+			.createSnapShot(newProp)
 			.then((tx) => {
 				console.log('transaction occured : ', tx.hash);
 				return tx
 					.wait()
 					.then(() => {
-						alert('Proposal submitted successfully');
+						alert('SnapShot submitted successfully');
 						jaimaatadi = 1 - jaimaatadi;
 					})
-					.catch((err) => alert("You're not authorized to submit a proposal"));
+					.catch((err) => alert("You're not authorized to submit a SnapShot"));
 			})
 			.catch((err) => {
-				alert("You're not authorized to submit a proposal");
+				alert("You're not authorized to submit a SnapShot");
 			});
 	};
 
 	useEffect(() => {
-		fetchProposals();
+		fetchSnapShots();
 	}, [jaimaatadi]);
 
-	const fetchProposals = async () => {
+	const fetchSnapShots = async () => {
 		setLoading(true);
 		contract = new ethers.Contract(smartContractAddress, ABI, mySigner);
 
 		contract
-			.getAllProposals()
+			.getAllSnapShots()
 			.then((val) => {
-				console.log('val: ', val);
-				console.log(val[0]);
-				setProposals(val);
-				console.log('proposals: ', proposals);
+				// console.log('val: ', val);
+				// console.log(val[0]);
+				setSnapShots(val);
+				// console.log('proposals: ', proposals);
 			})
 			.catch((err) =>
 				console.log('Printing error msg at getText function: ', err.message)
@@ -80,7 +80,7 @@ const index = ({ currLeft, mySigner }) => {
 	return (
 		<div>
 			<div>
-				{proposals.map((prp, idx) => (
+				{snapShots.map((prp, idx) => (
 					<div key={idx}>
 						<PollBoard
 							id={`${prp._id}`}
@@ -89,7 +89,7 @@ const index = ({ currLeft, mySigner }) => {
 							no={prp._no}
 							currLeft={currLeft}
 							mySigner={mySigner}
-							isSnapShot={false}
+							isSnapShot={true}
 						/>
 					</div>
 				))}
@@ -102,10 +102,10 @@ const index = ({ currLeft, mySigner }) => {
 						value={newProp}
 						onChange={(e) => setNewProp(e.target.value)}
 						className="form-control mx-2 my-2"
-						placeholder="Type your message..."
+						placeholder="Enter the Id of the proposal you want to snapshot"
 					/>
 					<button
-						onClick={sendProposal}
+						onClick={sendSnapShot}
 						className="btn btn-success mx-2 my-2 px-3"
 					>{`>`}</button>
 				</div>
