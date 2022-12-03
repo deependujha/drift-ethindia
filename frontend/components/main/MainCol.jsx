@@ -1,7 +1,8 @@
 import React from 'react';
 import Chats from '../chatroom/Chats';
+import RFP from '../rfp/RFP';
 
-const MainCol = ({ currLeft, currRight }) => {
+const MainCol = ({ currLeft, currRight, mySigner }) => {
 	if (currRight === 'chatroom') {
 		return (
 			<div>
@@ -21,6 +22,9 @@ const MainCol = ({ currLeft, currRight }) => {
 			<div>
 				<div>welcome to request for proposal of {currLeft}</div>
 				<div>alpha</div>
+				<div className="d-flex justify-content-center">
+					<RFP currLeft={currLeft} mySigner={mySigner}/>
+				</div>
 			</div>
 		);
 	} else if (currRight === 'snapshot') {

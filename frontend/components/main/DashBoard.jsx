@@ -6,7 +6,7 @@ import RightCol from "./RightCol";
 import MainCol from "./MainCol";
 import { useState } from "react";
 
-function ResponsiveAutoExample() {
+function ResponsiveAutoExample({mySigner}) {
   const [currLeft, setCurrLeft] = useState("DAO1");
   const [currRight, setCurrRight] = useState("chatroom");
 
@@ -17,7 +17,7 @@ function ResponsiveAutoExample() {
             <LeftCol currLeft={currLeft} setCurrLeft={setCurrLeft} />
         </Col>
         <Col sm={8}>
-          <MainCol currLeft={currLeft} currRight={currRight} />
+          <MainCol currLeft={currLeft} currRight={currRight} mySigner={mySigner} />
         </Col>
         <Col sm={2}>
             <RightCol currRight={currRight} setCurrRight={setCurrRight} />
