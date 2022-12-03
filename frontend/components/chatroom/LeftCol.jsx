@@ -1,4 +1,5 @@
 import ListGroup from "react-bootstrap/ListGroup";
+import Button from "react-bootstrap/Button";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -9,52 +10,46 @@ function BasicExample({ currLeft, setCurrLeft }) {
   // };
 
   return (
-    <ListGroup
+    <div
       style={{
         height: "100vh",
         overflow: "scroll",
       }}
       className="mt-3 sticky-top"
     >
-      <ListGroup.Item>
-        <div
-          onClick={() => {
-            console.log("home 1");
-            setCurrLeft("home1");
-          }}
-          className="text-center shadow-sm p-1 bg-body rounded text-success"
-          style={{ cursor: "pointer" }}
-        >
-          Home1
-        </div>
-      </ListGroup.Item>
+      <div
+        onClick={() => {
+          console.log("home 1");
+          setCurrLeft("home1");
+        }}
+        className="text-center text-success"
+        style={{ cursor: "pointer" }}
+      >
+        Home1
+      </div>
 
-      <ListGroup.Item>
-        <div
-          onClick={() => {
-            console.log("home 2");
-            setCurrLeft("home2");
-          }}
-          className="text-center shadow-sm p-1 bg-body rounded text-success"
-          style={{ cursor: "pointer" }}
-        >
-          Home2
-        </div>
-      </ListGroup.Item>
+      <div
+        onClick={() => {
+          console.log("home 2");
+          setCurrLeft("home2");
+        }}
+        className="text-center mt-3 text-success"
+        style={{ cursor: "pointer" }}
+      >
+        Home2
+      </div>
 
-      <ListGroup.Item>
-        <div
-          onClick={() => {
-            console.log("home 3");
-            setCurrLeft("home3");
-          }}
-          className="text-center shadow-sm p-1 bg-body rounded text-success"
-          style={{ cursor: "pointer" }}
-        >
-          Home3
-        </div>
-      </ListGroup.Item>
-    </ListGroup>
+      <div
+        onClick={() => {
+          console.log("home 3");
+          setCurrLeft("home3");
+        }}
+        className="text-center mt-3 text-success"
+        style={{ cursor: "pointer" }}
+      >
+        Home3
+      </div>
+    </div>
   );
 }
 
