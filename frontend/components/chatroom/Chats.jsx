@@ -67,7 +67,7 @@ const Chats = ({ currLeft }) => {
           </div>
         ))}
       </div>
-      <div className="position-absolute bottom-0" style={{width:"750px"}}>
+      <div className="position-absolute bottom-0" style={{width:"800px"}}>
         <div className="d-flex">
           <input
             type="email"

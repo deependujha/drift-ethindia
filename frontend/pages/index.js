@@ -40,16 +40,16 @@ function landing({ setMySigner, mySigner }) {
 
   return (
     <div>
-      <Image src="/bg.png" layout="fill" alt="img..." />
+      <Image src="/landing_bg.png" layout="fill" alt="img..." />
 
       <div className="metamask">
         <div className="text-white ">
-          <p className="text-6xl">DRIFT</p>
-          <p className="text-xl">Decenteralised Drifting through DAOs </p>
+          <p className="text-8xl">DRIFT</p>
+          <p className="text-3xl">Decenteralised Drifting through DAOs </p>
         </div>
         <Button
-          variant="outline-success"
-          className="d-flex text-center"
+          variant="outline-info"
+          className="d-flex text-center mt-10"
           onClick={connectWithMetaMask}
         >
           <Image
