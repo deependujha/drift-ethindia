@@ -7,8 +7,8 @@ import MainCol from "./MainCol";
 import { useState } from "react";
 
 function ResponsiveAutoExample() {
-  const [currLeft, setCurrLeft] = useState("home1");
-  const [currRight, setCurrRight] = useState("right2");
+  const [currLeft, setCurrLeft] = useState("DAO1");
+  const [currRight, setCurrRight] = useState("chatroom");
 
   return (
     <div>

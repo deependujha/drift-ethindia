@@ -1,56 +1,50 @@
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
-
-import Link from "next/link";
-import { useState } from "react";
+import DAOChannel from './DAOChannel';
 
 function BasicExample({ currLeft, setCurrLeft }) {
-  // const currentItem = () => {
-  //   console.log("hello world");
-  // };
+	// const currentItem = () => {
+	//   console.log("hello world");
+	// };
 
-  return (
-    <div
-      style={{
-        height: "100vh",
-        overflow: "scroll",
-      }}
-      className="mt-3 sticky-top"
-    >
-      <div
-        onClick={() => {
-          console.log("home 1");
-          setCurrLeft("home1");
-        }}
-        className="text-center text-success"
-        style={{ cursor: "pointer" }}
-      >
-        Home1
-      </div>
+	return (
+		<div
+			style={{
+				height: '100vh',
+				overflow: 'scroll',
+			}}
+			className="sticky-top pt-3"
+		>
+			<div
+				onClick={() => {
+					setCurrLeft('DAO1');
+				}}
+				style={{ cursor: 'pointer' }}
+			>
+				<DAOChannel img="/polygon.png" name="DAO-1" active={currLeft==="DAO1"} />
+			</div>
 
-      <div
-        onClick={() => {
-          console.log("home 2");
-          setCurrLeft("home2");
-        }}
-        className="text-center mt-3 text-success"
-        style={{ cursor: "pointer" }}
-      >
-        Home2
-      </div>
+			<hr />
 
-      <div
-        onClick={() => {
-          console.log("home 3");
-          setCurrLeft("home3");
-        }}
-        className="text-center mt-3 text-success"
-        style={{ cursor: "pointer" }}
-      >
-        Home3
-      </div>
-    </div>
-  );
+			<div
+				onClick={() => {
+					setCurrLeft('DAO2');
+				}}
+				style={{ cursor: 'pointer' }}
+			>
+				<DAOChannel img="/ens.png" name="DAO-2" active={currLeft==="DAO2"} />
+			</div>
+
+			<hr />
+
+			<div
+				onClick={() => {
+					setCurrLeft('DAO3');
+				}}
+				style={{ cursor: 'pointer' }}
+			>
+				<DAOChannel img="/bico.png" name="DAO-3" active={currLeft==="DAO3"} />
+			</div>
+		</div>
+	);
 }
 
 export default BasicExample;
