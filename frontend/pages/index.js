@@ -44,7 +44,7 @@ function landing({ setMySigner, mySigner }) {
 
       <div className="metamask">
         <div className="text-white ">
-          <p className="text-8xl">DRIFT</p>
+          <p className="text-8xl italic">DRIFT</p>
           <p className="text-3xl">Decenteralised Drifting through DAOs </p>
         </div>
         <Button
