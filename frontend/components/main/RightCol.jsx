@@ -4,14 +4,14 @@ import ListGroup from 'react-bootstrap/ListGroup';
 const RightCol = ({ currRight, setCurrRight }) => {
 	return (
 		<div className="d-flex flex-row sticky-top">
-			<div className="vr" />
+			<div className="vr text-white" />
 			<div className="ms-4">
 				<div
 					onClick={() => {
 						setCurrRight('chatroom');
 					}}
 					className={`mt-3 ${
-						currRight === 'chatroom' ? 'text-success fw-bolder' : 'text-dark'
+						currRight === 'chatroom' ? 'text-white text-lg fw-bolder' : 'text-white'
 					}`}
 					style={{ cursor: 'pointer' }}
 				>
@@ -23,7 +23,7 @@ const RightCol = ({ currRight, setCurrRight }) => {
 						setCurrRight('forum');
 					}}
 					className={`mt-3 ${
-						currRight === 'forum' ? 'text-success fw-bolder' : 'text-dark'
+						currRight === 'forum' ? 'text-white text-lg fw-bolder' : 'text-white'
 					}`}
 					style={{ cursor: 'pointer' }}
 				>
@@ -35,7 +35,7 @@ const RightCol = ({ currRight, setCurrRight }) => {
 					}}
 					style={{ cursor: 'pointer' }}
 					className={`mt-3 ${
-						currRight === 'rfp' ? 'text-success fw-bolder' : 'text-dark'
+						currRight === 'rfp' ? 'text-white text-lg fw-bolder' : 'text-white'
 					}`}
 				>
 					RFP
@@ -46,7 +46,7 @@ const RightCol = ({ currRight, setCurrRight }) => {
 					}}
 					style={{ cursor: 'pointer' }}
 					className={`mt-3 ${
-						currRight === 'snapshot' ? 'text-success fw-bolder' : 'text-dark'
+						currRight === 'snapshot' ? 'text-white text-lg fw-bolder' : 'text-white'
 					}`}
 				>
 					SnapShot
@@ -57,7 +57,7 @@ const RightCol = ({ currRight, setCurrRight }) => {
 					}}
 					style={{ cursor: 'pointer' }}
 					className={`mt-3 ${
-						currRight === 'analytics' ? 'text-success fw-bolder' : 'text-dark'
+						currRight === 'analytics' ? 'text-white text-lg fw-bolder' : 'text-white'
 					}`}
 				>
 					Analytics
