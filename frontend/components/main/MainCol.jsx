@@ -1,4 +1,5 @@
 import React from 'react';
+import Chats from '../chatroom/Chats';
 
 const MainCol = ({ currLeft, currRight }) => {
 	if (currRight === 'chatroom') {
@@ -6,6 +7,7 @@ const MainCol = ({ currLeft, currRight }) => {
 			<div>
 				<div>welcome to chatroom of {currLeft}</div>
 				<div>alpha</div>
+				<Chats currLeft={currLeft} />
 			</div>
 		);
 	} else if (currRight === 'forum') {

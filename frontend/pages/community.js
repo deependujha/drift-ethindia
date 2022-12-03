@@ -1,11 +1,11 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import ChatRoom from '../components/chatroom/DashBoard';
+import DashBoard from '../components/main/DashBoard';
 
 const community = () => {
 	return (
 		<Container style={{ height: '100vh' }}>
-			<ChatRoom />
+			<DashBoard />
 		</Container>
 	);
 };
