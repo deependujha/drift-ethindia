@@ -15,8 +15,8 @@ struct Proposal{
     bool _passed;
 }
 
-contract DummyDao1 {
-    string public DaoName="DAO-1";
+contract DummyDao3 {
+    string public DaoName="DAO-3";
     uint public idProposal;
     mapping(uint => Proposal) idToProposal;
     mapping(uint=> bool) isSnapShot;
@@ -36,10 +36,10 @@ contract DummyDao1 {
     constructor (){
         owner = msg.sender;
         representative[owner]=true;
-        balance[0x67099d557997E3Ee308B3C49029C331A2d4569Dc]=10;
+        balance[0x67099d557997E3Ee308B3C49029C331A2d4569Dc]=100;
         balance[0x31B0F3eeD8cAFA7D09C862b7779AAc826F3c4468]=100;
         balance[0xE99DB9cf24e39901228bFa70D05e1aE8b41262e3]=100;
-        balance[0x5aCE6dFcC53446F105F0721650573ae9F4531Af7]=100;
+        balance[0x5aCE6dFcC53446F105F0721650573ae9F4531Af7]=10;
     }
 
 

@@ -15,7 +15,7 @@ struct Proposal{
     bool _passed;
 }
 
-contract DummyDao {
+contract DummyDao2 {
     string public DaoName="DAO-2";
     uint public idProposal;
     mapping(uint => Proposal) idToProposal;
