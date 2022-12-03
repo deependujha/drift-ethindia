@@ -96,7 +96,7 @@ const PollBoard = ({ id, text, yes, no, isSnapShot, currLeft, mySigner }) => {
 		}
 	};
 	return (
-		<Card style={{ width: '30rem' }} className="text-center">
+		<Card style={{ width: '30rem' }} className="text-center mt-4">
 			<Card.Body>
 				<Card.Title># Id: {id}</Card.Title>
 				<Card.Text>{text}</Card.Text>
