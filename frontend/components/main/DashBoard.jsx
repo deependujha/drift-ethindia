@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import LeftCol from "../chatroom/LeftCol";
+import LeftCol from "./LeftCol";
 import RightCol from "./RightCol";
 import MainCol from "./MainCol";
 import { useState } from "react";
