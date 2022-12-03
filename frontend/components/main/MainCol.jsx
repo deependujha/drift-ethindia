@@ -6,7 +6,6 @@ const MainCol = ({ currLeft, currRight }) => {
 		return (
 			<div>
 				<div>welcome to chatroom of {currLeft}</div>
-				<div>alpha</div>
 				<Chats currLeft={currLeft} />
 			</div>
 		);
