@@ -12,7 +12,7 @@ function landing() {
     >
       <Col sm={6} className="text-center my-auto">
         <div>
-          <p class="fs-1 fw-bold text-dark">Get Updated With Your DAO</p>
+          <p className="fs-1 fw-bold text-dark">Get Updated With Your DAO</p>
         </div>
         <Button variant="success" className="me-3">
           <Image
