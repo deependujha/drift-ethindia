@@ -1,0 +1,145 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/deependu/drift-ethindia/smartcontract/contracts/Dao1.sol": {
+      "lastModificationDate": 1670051077655,
+      "contentHash": "0cba39c0a9ed1cf1bed6d4355aba56b0",
+      "sourceName": "contracts/Dao1.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "DummyDao1"
+      ]
+    },
+    "/home/deependu/drift-ethindia/smartcontract/contracts/Dao2.sol": {
+      "lastModificationDate": 1670051080764,
+      "contentHash": "80867bbea69aaf5db3f6e575c99b12c5",
+      "sourceName": "contracts/Dao2.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "DummyDao2"
+      ]
+    },
+    "/home/deependu/drift-ethindia/smartcontract/contracts/Dao3.sol": {
+      "lastModificationDate": 1670051086482,
+      "contentHash": "4a9cd0834b1f73ae9a2e16d635e79b23",
+      "sourceName": "contracts/Dao3.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "DummyDao3"
+      ]
+    },
+    "/home/deependu/drift-ethindia/smartcontract/contracts/Lock.sol": {
+      "lastModificationDate": 1670003671740,
+      "contentHash": "ae66265769cc28ebdaa34881df95bc5e",
+      "sourceName": "contracts/Lock.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Lock"
+      ]
+    }
+  }
+}
