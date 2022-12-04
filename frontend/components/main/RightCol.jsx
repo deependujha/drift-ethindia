@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
+import PushComponent from "../PushComponent"
 
 const RightCol = ({ currRight, setCurrRight }) => {
 	return (
@@ -11,24 +13,30 @@ const RightCol = ({ currRight, setCurrRight }) => {
 						setCurrRight('chatroom');
 					}}
 					className={`mt-3 ${
-						currRight === 'chatroom' ? 'text-white text-lg fw-bolder' : 'text-white'
+						currRight === 'chatroom'
+							? 'text-white text-lg fw-bolder'
+							: 'text-white'
 					}`}
 					style={{ cursor: 'pointer' }}
 				>
 					Chat Room
 				</div>
+				<Link href="https://forum-mocha-beta.vercel.app/newest ">
+					<div
+						onClick={() => {
+							setCurrRight('forum');
+						}}
+						className={`mt-3 ${
+							currRight === 'forum'
+								? 'text-white text-lg fw-bolder'
+								: 'text-white'
+						}`}
+						style={{ cursor: 'pointer' }}
+					>
+						Forum
+					</div>
+				</Link>
 
-				<div
-					onClick={() => {
-						setCurrRight('forum');
-					}}
-					className={`mt-3 ${
-						currRight === 'forum' ? 'text-white text-lg fw-bolder' : 'text-white'
-					}`}
-					style={{ cursor: 'pointer' }}
-				>
-					Forum
-				</div>
 				<div
 					onClick={() => {
 						setCurrRight('rfp');
@@ -46,7 +54,9 @@ const RightCol = ({ currRight, setCurrRight }) => {
 					}}
 					style={{ cursor: 'pointer' }}
 					className={`mt-3 ${
-						currRight === 'snapshot' ? 'text-white text-lg fw-bolder' : 'text-white'
+						currRight === 'snapshot'
+							? 'text-white text-lg fw-bolder'
+							: 'text-white'
 					}`}
 				>
 					SnapShot
@@ -57,10 +67,24 @@ const RightCol = ({ currRight, setCurrRight }) => {
 					}}
 					style={{ cursor: 'pointer' }}
 					className={`mt-3 ${
-						currRight === 'analytics' ? 'text-white text-lg fw-bolder' : 'text-white'
+						currRight === 'analytics'
+							? 'text-white text-lg fw-bolder'
+							: 'text-white'
 					}`}
 				>
 					Analytics
+				</div>
+				<div
+					onClick={() => {
+						setCurrRight('send');
+					}}
+					className={`mt-3 ${
+						currRight === 'send' ? 'text-white text-lg fw-bolder' : 'text-white'
+					}`}
+					style={{ cursor: 'pointer' }}
+				>
+					Send
+					<PushComponent/>
 				</div>
 			</div>
 		</div>
